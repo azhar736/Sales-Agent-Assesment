@@ -37,4 +37,4 @@ yarn-error.log*
 .turbo
 
 # Git
-**/git/ 
+**/.git/ 
