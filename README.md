@@ -89,26 +89,17 @@ The AI Sales Assistant is a full-stack application that helps sales teams analyz
    # Copy example env file
    cp .env.example .env
 
-   # Configure your .env file with the following settings:
+   # Rename and configure environment variables
+   mv .env.example .env
 
-   # API Keys
-   OPENAI_API_KEY=your_openai_api_key_here
-
-   # Server Configuration
+   # Edit .env file with your OpenAI API key and other settings:
+   OPENAI_API_KEY=your_api_key_here
    HOST=localhost
    PORT=8000
    ENV=development
-
-   # CORS
    FRONTEND_URL=http://localhost:3000
-
-   # Logging
    LOG_LEVEL=INFO
    ```
-
-   # Important: Replace 'your_openai_api_key_here' with your actual OpenAI API key
-
-   # You can get an API key from: https://platform.openai.com/api-keys
 
 5. Run the backend server:
 
@@ -138,7 +129,17 @@ The AI Sales Assistant is a full-stack application that helps sales teams analyz
    yarn install
    ```
 
-3. Run the development server:
+3. Configure environment variables:
+
+   ```bash
+   # Create .env.local file
+   touch .env.local
+
+   # Add the following variables
+   NEXT_PUBLIC_API_URL=http://localhost:8000
+   ```
+
+4. Run the development server:
 
    ```bash
    # Using npm
